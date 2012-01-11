@@ -23,6 +23,7 @@ Source0: 	%{name}-%{version}.%{svnrev}.tar.xz
 
 BuildRequires:	edje
 BuildRequires:	embryo
+BuildRequires:	evas
 BuildRequires: 	gettext-devel
 BuildRequires:	pkgconfig(elementary)
 BuildRequires:	pkgconfig(embryo)
