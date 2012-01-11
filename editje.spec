@@ -17,7 +17,7 @@ Name:		editje
 Version:	0.9.3
 Release:	0.%{svnrev}.1
 License:	LGPL,GPLv3
-Group:		Applications/Internet
+Group:		Graphical desktop/Enlightenment
 URL:		http://enlightenment.org/
 Source0: 	%{name}-%{version}.%{svnrev}.tar.xz
 
