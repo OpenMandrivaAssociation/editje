@@ -1,29 +1,19 @@
 %define _enable_debug_packages %{nil}
 %define debug_package %{nil}
 
-#Tarball of svn snapshot created as follows...
-#Cut and paste in a shell after removing initial #
 
-#svn co http://svn.enlightenment.org/svn/e/trunk/editje editje; \
-#cd editje; \
-#SVNREV=$(LANGUAGE=C svn info | grep "Last Changed Rev:" | cut -d: -f 2 | sed "s@ @@"); \
-#VERSION=$(cat configure.ac | grep "editje" | grep INIT | sed 's@\[@@g' | sed 's@\]@@g' | sed 's@)@@g' | cut -d, -f 2 | sed "s@ @@"); \
-#PKG_VERSION=$VERSION.$SVNREV; \
-#cd ..; \
-#tar -Jcf editje-$PKG_VERSION.tar.xz editje/ --exclude .svn --exclude .*ignore
-
-%define svndate 20120628
+%define gitdate 20150504
 # didn't change anything since date above up to r76819
 %define svnrev 76819
 
 Summary:	Edje editor oriented towards UI design
 Name:		editje
 Version:	0.9.3
-Release:	0.%{svnrev}.1
+Release:	0.%{gitdate}.1
 License:	LGPL,GPLv3
 Group:		Graphical desktop/Enlightenment
 URL:		http://enlightenment.org/
-Source0: 	%{name}-%{version}.%{svnrev}.tar.xz
+Source0: 	%{name}-%{version}.%{gitdate}.tar.gz
 
 BuildRequires:	edje
 BuildRequires:	embryo
@@ -45,7 +35,7 @@ a GUI over the edc syntax. It provides three major modes: standard
 edition, animations and signals management.
 
 %prep
-%setup -qn %{name}-%{version}.%{svnrev}
+%setup -qn %{name}-%{version}.%{gitdate}
 
 %build
 NOCONFIGURE=yes ./autogen.sh
