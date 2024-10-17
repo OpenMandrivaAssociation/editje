@@ -10,7 +10,7 @@ Version:	0.9.3
 Release:	0.%{gitdate}.1
 License:	LGPL,GPLv3
 Group:		Graphical desktop/Enlightenment
-URL:		http://enlightenment.org/
+URL:		https://enlightenment.org/
 Source0: 	%{name}-%{version}.%{gitdate}.tar.gz
 
 BuildRequires:	edje
