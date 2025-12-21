@@ -13,6 +13,11 @@ Group:		Graphical desktop/Enlightenment
 URL:		https://enlightenment.org/
 Source0: 	%{name}-%{version}.%{gitdate}.tar.gz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	edje
 BuildRequires:	embryo
 BuildRequires:	evas
